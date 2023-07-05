@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>Tess Thomas</h1>
+    <h2>WEB-115 Section 0003</h2>
+    <h3>Build Your Resume</h3>
+  </header>
+
+  <main>
+    <!-- Form -->
+    <form id="myForm" action="#">
+      <fieldset class="your-info">
+        <legend>Your Info</legend>
+        <div class="pair">
+          <label for="fname">First name:</label>     
+          <input type="text" id="fname" name="fname">
+        </div>
+        <div class="pair">
+          <label for="lname">Last name:</label>
+          <input type="text" id="lname" name="lname">
+        </div>
+        <div class="pair">
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title">
+        </div class="pair">
+        <div class="pair">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="pair">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+        </div>
+      </fieldset>
+
+      <fieldset class="links">
+        <legend>Links</legend>
+        <div class="pair">
+          <label for="linkedin">LinkedIn:</label>     
+          <input type="url" id="linkedin" name="linkedin">
+        </div>
+        <div class="pair">
+          <label for="github">GitHub:</label>
+          <input type="url" id="github" name="github">
+        </div>
+        <div class="pair">
+          <label for="portfolio">Portfolio:</label>
+          <input type="url" id="portfolio" name="portfolio">
+        </div class="pair">
+        <ul>
+          <li>Please enter full URLs starting with "https..."</li>
+        </ul>
+      </fieldset>
+
+      <fieldset class="about">
+        <legend>About</legend>
+        <label for="about">Introduce yourself:</label><br>
+        <textarea name="about" id="about" cols="30" rows="5" placeholder="Proactive and detail oriented Web Developer with 10+ years of experience in design..."></textarea>
+      </fieldset>
+
+      <fieldset class="skills">
+        <legend>Skills</legend>
+        <div class="skills gskills">
+          <label for="gskills">Soft Skills:</label>
+          <input type="text" name="gskills">
+          <input type="text" name="gskills">
+          <input type="text" name="gskills">
+          <button type="button" id="addGenSkillBtn">+</button>
+        </div>
+
+        <div class="skills tskills">
+          <label for="tskills">Tools & Technologies:</label>
+          <!-- <div id="skillsBox"> -->
+            <input type="text" name="tskills">
+            <input type="text" name="tskills">
+            <input type="text" name="tskills">
+          <!-- </div> -->
+          <button type="button" id="addTechSkillBtn">+</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="edu">
+        <legend>Education</legend>
+        <label for="education">List your education:</label><br>
+        <textarea name="education" id="education" cols="30" rows="5"></textarea>
+      </fieldset>
+
+      <fieldset class="work">
+        <legend>Work Experience</legend>
+        <!-- Job 1 -->
+        <div class="job">
+          <div class="item-a">
+            <label for="job1">Job 1:</label>
+            <input type="text" id="job1" name="job1">
+          </div>
+          <div class="item-b">
+            <label for="emp1">Employer:</label>
+            <input type="text" id="emp1" name="emp1">
+          </div>
+          <div class="item-c">
+            <label for="job1startdate">Start date:</label>
+            <input type="date" id="job1startdate">
+          </div>
+          <div class="item-d">
+            <label for="job1enddate">End date:</label>
+            <input type="date" id="job1enddate" name="job1enddate">
+          </div>
+          <div class="item-e">
+            <label for="job1desc">Description:</label>
+            <textarea name="job1desc" id="job1desc" cols="30" rows="5"></textarea>
+          </div>
+          <div class="item-f">
+            <label for="job1list">Bullet points:</label>
+            <textarea name="job1list" id="job1list" cols="30" rows="5" placeholder="Hit enter or return between relevant responsibilities or accomplishments to have them displayed as a bullet point list."></textarea>
+          </div>
+        </div>
+        <!-- Job 2 -->
+        <div class="job">
+          <div class="item-a">
+            <label for="job2">Job 2:</label>
+            <input type="text" id="job2" name="job2">
+          </div>
+          <div class="item-b">
+            <label for="emp2">Employer:</label>
+            <input type="text" id="emp2" name="emp2">
+          </div>
+          <div class="item-c">
+            <label for="job2startdate">Start date:</label>
+            <input type="date" id="job2startdate">
+          </div>
+          <div class="item-d">
+            <label for="job2enddate">End date:</label>
+            <input type="date" id="job2enddate" name="job2enddate">
+          </div>
+          <div class="item-e">
+            <label for="job2desc">Description:</label>
+            <textarea name="job2desc" id="job2desc" cols="30" rows="5"></textarea>
+          </div>
+          <div class="item-f">
+            <label for="job2list">Bullet points:</label>
+            <textarea name="job2list" id="job2list" cols="30" rows="5" placeholder="Hit enter or return between relevant responsibilities or accomplishments to have them displayed as a bullet point list."></textarea>
+          </div>
+        </div>
+        <!-- Job 3 -->
+        <div class="job">
+          <div class="item-a">
+            <label for="job3">Job 3:</label>
+            <input type="text" id="job3" name="job3">
+          </div>
+          <div class="item-b">
+            <label for="emp3">Employer:</label>
+            <input type="text" id="emp3" name="emp3">
+          </div>
+          <div class="item-c">
+            <label for="job3startdate">Start date:</label>
+            <input type="date" id="job3startdate">
+          </div>
+          <div class="item-d">
+            <label for="job3enddate">End date:</label>
+            <input type="date" id="job3enddate" name="job3enddate">
+          </div>
+          <div class="item-e">
+            <label for="job3desc">Description:</label>
+            <textarea name="job3desc" id="job3desc" cols="30" rows="5"></textarea>
+          </div>
+          <div class="item-f">
+            <label for="job3list">Bullet points:</label>
+            <textarea name="job3list" id="job3list" cols="30" rows="5" placeholder="Hit enter or return between relevant responsibilities or accomplishments to have them displayed as a bullet point list."></textarea>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="refs">
+        <legend>References</legend>
+        <div class="refs-container">
+          <label for="ref">List any references:</label>
+          <textarea name="ref" id="ref" cols="30" rows="3"></textarea>
+        </div>
+      </fieldset>
+
+      <div class="btn-container">
+        <button type="button" id="createBtn">Create Resume</button>
+        <p id="reset">Reset Form</p>
+      </div>
+    </form>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="projectJS.js"></script>
+</body>
+</html>

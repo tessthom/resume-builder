@@ -1,0 +1,380 @@
+/* 
+Color Scheme:
+Off White: #fef9ef
+Coral: #fe5258
+Blue: #2A98C0
+Charcoal: #2f2f2f
+*/
+
+/* General Styles */
+html {
+  box-sizing: border-box;
+  background-color: #fef9ef;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+*  {
+  font-family: 'Inter', sans-serif;
+}
+h1, h2, h3  {
+  font-family: 'Roboto', sans-serif;
+}
+body  {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header"
+    "main main";
+}
+main  {
+  max-width: 1300px;
+}
+
+/* Header Styles */
+header  {
+  grid-area: header;
+  background-color: #fe5258;
+  background-image: linear-gradient(to bottom right, #fe5258, #fe5258, #df474c);
+  color: #fff;
+  padding: 1rem 3rem;
+}
+h1  {
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+/* Form Styles */
+main  {
+  grid-area: main;
+  color: #2f2f2f;
+}
+form  {
+  margin: 3rem;
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "info links"
+    "skills about"
+    "skills edu"
+    "work work"
+    "work work"
+    "refs auto";
+  gap: 2rem;
+}
+fieldset.your-info  {
+  grid-area: info;
+}
+fieldset.links  {
+  grid-area: links;
+}
+fieldset.about  {
+  grid-area: about;
+  height: min-content;
+}
+fieldset.skills  {
+  grid-area: skills;
+}
+fieldset.edu  {
+  grid-area: edu;
+  height: min-content;
+}
+fieldset.work  {
+  grid-area: work;
+}
+fieldset.refs  {
+  grid-area: refs;
+}
+fieldset  {
+  border: none;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, .39) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding: 1.5rem;
+}
+legend  {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+input  {
+  height: 2em;
+  margin: 0.5em 0;
+}
+textarea  {
+  line-height: 1.25em;
+}
+input, textarea  {
+  padding: 0.5em;
+  border: none;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  border-top: none;
+  border-bottom: 1px solid #DDD;
+  box-shadow: inset 1px 1px 3px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
+  font-size: 1em;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #2A98C0;
+}
+/* Form: Basic Info */
+div.pair  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.your-info input, .links input  {
+  width: 70%;
+}
+/* Form: Links */
+.links ul  {
+  padding-top: 1.5rem;
+  padding-inline-start: 1rem;
+  font-size: 1rem;
+}
+.links li::marker  {
+  color:#fe5258;
+}
+/* Form: About */
+.about textarea  {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+/* Form: Skills */
+div.skills  {
+  display: flex;
+  flex-flow: column wrap;
+  margin-bottom: 1rem;
+}
+div.tskills  {
+  margin-bottom: 0;
+}
+.skills input  {
+  width: 100%;
+}
+.skills button  {
+  width: 2rem;
+  height: 2rem;
+  font-size: 2rem;
+  line-height: 2rem;
+  padding-bottom: 0.15em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  color:#fff;
+  background-color: #fe5258;
+  box-shadow: 1px 2px 6px rgba(47, 47, 47, 0.3);
+}
+/* Form: Education */
+.edu textarea  {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+/* Form: Jobs */
+div.job  {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "a c"
+    "b d"
+    "e f";
+  column-gap: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px dotted #c6c6c6;
+}
+div.item-a  {
+  grid-area: a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.item-b  {
+  grid-area: b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.item-c  {
+  grid-area: c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.item-d  {
+  grid-area: d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.item-e  {
+  grid-area: e;
+  margin: 1rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+}
+div.item-f  {
+  grid-area: f;
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.item-a label  {
+  font-weight: 600;
+}
+.item-a input, .item-b input  {
+  width: 75%;
+}
+.item-c input, .item-d input  {
+  width: 70%;
+}
+.item-e textarea, .item-f textarea  {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+div.job:last-of-type  {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+/* Form: References */
+div.refs-container  {
+  display: flex;
+  flex-direction: column;
+}
+.refs-container label  {
+  margin-bottom: 0.5rem;
+}
+/* Form: Create Resume Button */
+.btn-container  {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+#createBtn  {
+  /* margin-top: 2rem; */
+  padding: 1rem 1.5rem;
+  width: 70%;
+  color: #fff;
+  background-color: #fe5258;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  box-shadow: 1px 2px 6px rgba(47, 47, 47, 0.5);
+}
+.btn-container p  {
+  color:#2A98C0;
+  font-weight: 500;
+}
+.btn-container p:hover, #createBtn:hover  {
+  cursor: pointer;
+}
+#createBtn:active  {
+  transform: translateY(5px);
+}
+.btn-container p:active  {
+  font-weight: bolder;
+}
+
+/* Resume Styles */
+body.n  {
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+  display: grid;
+  grid-template-columns: 1fr 60%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "a a"
+    "b e"
+    "c e"
+    "d e";
+  gap: 1rem 3rem;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+.n header  {
+  grid-area: a;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0 1rem;
+}
+.n .hright  {
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+.n .hright h2  {
+  border-bottom: none;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+.n h1  {
+  font-size: 3em;
+  margin: 0;
+}
+.n .about  {
+  grid-area: b;
+}
+.n .skills  {
+  grid-area: c;
+}
+.n .edu  {
+  grid-area: d;
+}
+.n .work  {
+  grid-area: e;
+}
+.n div>h2  {
+  width: 100%;
+  font-size: 2em;
+  margin: 0;
+  border-bottom: 2px solid black;
+}
+.n h2>span  {
+  margin-left: 1rem; 
+}
+.n h3  {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.n h4  {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.n div.job  {
+  display: flex;
+  flex-flow: column wrap;
+  margin-left: 1rem;
+}
+.n .jdeets  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+}
+.n .jdeets p  {
+  padding-left: 10%;
+  border-left: solid 2px;
+}
+.n p  {
+  line-height: 1.5em;
+}
+.n .jdesc  {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+}
